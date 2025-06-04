@@ -16,4 +16,6 @@ A simple and elegant task management (todo) app built with **React** and **Local
 
 ## 📸 Screenshot
 
-![screenshot](public/screenshot.png)
+<p align="center">
+  <img src="public/screenshot.png" alt="screenshot" width="600" />
+</p>
