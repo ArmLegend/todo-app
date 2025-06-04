@@ -24,7 +24,7 @@ function App() {
     setTodos([newTask, ...todos]);
   };
 
-  const handleToggleTodo = (index) => {
+  const toggleTask = (index) => {
     const updatedTodo = todos.map((todo, todoIndex) => {
       if (todoIndex === index) {
         return { ...todo, completed: !todo.completed };
@@ -36,10 +36,10 @@ function App() {
     setTodos(updatedTodo);
   };
 
-  function handleDeleteTodo(index) {
+  const deleteTask = (index) => {
     const updatedTodos = todos.filter((_, todoIndex) => todoIndex !== index);
     setTodos(updatedTodos);
-  }
+  };
 
   return (
     <>
@@ -52,10 +52,10 @@ function App() {
       <TodoList
         todos={todos}
         selectedTab={selectedTab}
-        handleDeleteTodo={handleDeleteTodo}
-        handleToggleTodo={handleToggleTodo}
+        handleDeleteTodo={deleteTask}
+        handleToggleTodo={toggleTask}
       />
-      <TodoInput handleAddTodo={addTask} />
+      <TodoInput onAdd={addTask} />
     </>
   );
 }

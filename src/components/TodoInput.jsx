@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const TodoInput = ({ handleAddTodo }) => {
+const TodoInput = ({ onAdd }) => {
   const [value, setValue] = useState("");
   return (
     <div className="input-container">
@@ -15,7 +15,7 @@ const TodoInput = ({ handleAddTodo }) => {
           if (!value) {
             return;
           }
-          handleAddTodo(value);
+          onAdd(value);
           setValue("");
         }}
       >
